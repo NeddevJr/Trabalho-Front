@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./2f01da68024c4c30b183a63de451b26e.png" type="image/x-icon">
+    <title>Pizza Cut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/formatacoes.css">
+    
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo"><img src="./2f01da68024c4c30b183a63de451b26e.png" alt=""></a>
+        <ul class="navegador">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="./index.html">Página inicial</a></li>
+          
+
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="banner">
+        <div class="conteudo">
+          <h2>Contatos</h2>  
+          
+            <a href="#" class="button">Pediu chegou meu consagrado</a>
+        </div>
+    </section>
+    
+    <section class="sobre" id="sobre">
+        <div class="row">
+        <div class="col50">
+        <h2 class="titletext"><span>P</span>resença online</h2>
+        <p>Estamos presentes nas maiores plataforams de entrega.
+        </p>
+        
+       
+    </div>
+    <p><p>    </p>
+        <p>⠀⠀⠀⠀⠀⠀⠀</p>
+        <p>⠀⠀⠀⠀⠀⠀⠀</p>
+        <p>⠀⠀⠀⠀⠀⠀⠀</p>
+
+    <!----->
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <div class="slide first">
+                <img src="./tonolucro-logo.png" alt="imagem 1">
+            </div>
+            <div class="slide">
+                <img src="./ifood.png" alt="imagem 2">
+            </div>
+            <div class="slide">
+                <img src="./ubereatsd.png" alt="imagem 3">
+            </div>
+
+            <div class="navigation">
+                <div class="autobutton1"></div>
+                <div class="autobutton2"></div>
+                <div class="autobutton3"></div>
+            </div>
+
+        </div>
+        
+        <div class="manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+    <!----->
+    </section>
+                <h3></h3>
+            </div>  
+        </div>     
+       </div>
+        </div>
+    </section>
+        </div>
+    </section>
+    <section class="clientes" id="clientes">
+        <h2 class="titletext"><span>C</span>onte mais<span>S</span>obre você</h2>
+        <!---->
+        <form>
+            <div class="box">
+                <div class="label"><label for="nome">Nome:</label></div>
+                <input class="input" id="nome" type="text" placeholder="nome" required>
+            </div>
+            <div class="box">
+                <div class="label"><label for="email">E-mail:</label></div>
+                <input class="input" id="email" type="email" placeholder="e-mail" required>
+            </div>
+            <div class="box">
+                <div class="label"><label for="telefone">Telefone:</label></div>
+                <input class="input" id="telefone" type="tel" placeholder="telefone">
+            </div>
+            <div class="box">
+                <div class="label"><label for="estado">Estado:</label></div>
+                <select id="estado" onchange="estadoSelecionado()">
+                    <option value=""disabled selected>Selecione...</option>
+                    <option value="SP">SP</option>
+                    <option value="RJ">RJ</option>
+                    <option value="TO">TO</option>
+                </select>
+            </div>
+            <div class="box">
+                <div class="label"><label for="cidade">Cidade:</label></div>
+                <select id="cidade">
+                    <option value="" disabled selected>Selecione...</option>
+    
+                </select>
+            </div>
+            <div class="box">
+                <div class="label"><label for="idade">Idade:</label></div>
+                <input class="input" id="idade" type="number" min="0" max="200" placeholder="idade">
+            </div>
+            <div class="box">
+                <div class="label">Sexo:</div>
+                <div class="sex-radio">
+                    <input type="radio" id="sexo-m" name="sexo" value="Masculino" required>
+                    <label for="sexo-m">Masculino</label>
+                    <input type="radio" id="sexo-f" name="sexo" value="Feminino" required>
+                    <label for="sexo-f">Feminino</label>
+                </div>
+            </div>
+            <div class="box">
+                <div class="label"><label for="motivo">Motivo:</label></div>
+                <select id="motivo" required>
+                    <option value=""disabled selected>Selecione...</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="elogio">Elogio</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="box-text">
+                <label for="msg">Mensagem:</label>
+                <textarea id="msg" name="msg" rows="10" cols="35" required></textarea>
+            </div>
+            <div class="box">
+                <input class="button" type="submit" value="Enviar">
+            </div>
+        </form>
+    </body>
+    <script>
+        function estadoSelecionado(){
+            var estado = document.getElementById("estado");
+            var cidade = document.getElementById("cidade");
+            var x = cidade.options.length;
+            for (i=0; i<x; i++){
+                cidade.options.remove(1);
+            }
+            if(estado.value=='SP'){
+                var cidades_SP = [
+                    'Araraquara',
+                    'Campinas',
+                    'Ibitinga',
+                    'Santos',
+                    'São Paulo',
+                ];
+                cidades_SP.forEach(function(item){
+                    var opt = document.createElement("option");
+                    opt.text = item
+                    opt.setAttribute("value", item)
+                    cidade.options.add(opt)
+                });
+            }
+            if(estado.value=='RJ'){
+                var cidades_RJ = [
+                    'Belford Roxo',
+                    'Duque de Caxias',
+                    'Niterói',
+                    'Nova Iguaçu',
+                    'Rio de Janeiro',
+                ];
+                cidades_RJ.forEach(function(item){
+                    var opt = document.createElement("option");
+                    opt.text = item
+                    opt.setAttribute("value", item)
+                    cidade.options.add(opt)
+                });
+            }
+            if(estado.value=='TO'){
+                var cidades_TO = [
+                    'Araguaina',
+                    'Gurupi',
+                    'Miracema',
+                    'Palmas',
+                    'Porto Nacional'
+                ];
+                cidades_TO.forEach(function(item){
+                    var opt = document.createElement("option");
+                    opt.text = item
+                    opt.setAttribute("value", item)
+                    cidade.options.add(opt)
+                });
+            }
+        }
+    </script>
+    </html>
+     <!----->
+        <div class="title">
+            <h2 class="titletext"><span>C</span>ontate-nos</h2>
+            <p>Nossa pizzaria esta presente nas principais redes socias</p>
+           
+        </div>
+
+
+     
+        <nav class="btn_social">
+                    
+            <ul>
+                <li><a href="https://pt-br.facebook.com/" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank" title="youtube"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.whatsapp.com/?" target="_blank" title="youtube"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank" title="linkdin"><i class="fa fa-linkedin"></i></a></li>
+                             
+            </ul>
+         </nav>
+
+      
+         <p>    </p>
+         <p>⠀⠀⠀⠀⠀⠀⠀</p>
+         <p>⠀⠀⠀⠀⠀⠀⠀</p>
+         <p>⠀⠀⠀⠀⠀⠀⠀</p>
+         <p>⠀⠀⠀⠀⠀⠀⠀</p>
+         <p>⠀⠀⠀⠀⠀⠀⠀</p>
+         <p>⠀⠀⠀⠀⠀⠀⠀</p>
+         <p>⠀⠀⠀⠀⠀⠀⠀</p>
+         
+         
+        
+
+        <!---->
+        <div class="title white">
+            <h2 class="titletext">O que Falam  <span>S</span>obre <span>N</span>ós</h2>
+            <p>Comentarios de nossos clientes a respeito de nosso estabelecimento.</p>    
+        </div>
+        <div class="conteudo">
+          <div class="box">
+            <div class="imgBx">
+                
+                <img src="./casimiro-miguel-faz-lives-que-duram-8-horas-1667815375225_v2_4x3.jpg">
+            </div>
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+    
+            </ul>
+            <div class="text">
+                
+                <p>Estive no Pizza Cut, me senti muito satisfeito com suas pizzas, isso aqui estamos falando da elite, não tem erro, o atendimento dos garçons foi maravilhoso; não deixou a desejar em nehum aspecto, planejo voltar com o Pedro Certezas e o Defante.</p>
+                <h3>Casimiro</h3>
+                
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+                <img src="./download.jfif">
+            </div>
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+    
+            </ul>
+            <div class="text">
+                <p>No Pizza Cut, me senti muito satisfeito com suas pizzas de diferentes tipos, seus chefs prepararam a comida com muito detalhe; um ambiente aconchegante remetendo a um lugar de paz, planejo voltar para desfrutar mais do ambiente. A pizza é tão boa que agora tenho certeza do hexa.</p>
+                <h3>Neymar Jr</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+                <img src="./images/clienteF2.jpg">
+            </div>
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+    
+            </ul>
+            <div class="text">
+                <p>O Pizza Cut cria um ambiente diferente de qualquer outro que ja visitei, me senti muito satisfeita com seu estilo, e o que falar da pizza que foi preparada com muito requinte pelos melhores chefs de cozinha, concerteza retonarei para vivenciar novamente esta experiência.</p>
+                <h3>Emma Winston</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+                <img src="./images/clienteH3.jpg">
+            </div>
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+    
+            </ul>
+            <div class="text">
+                <p>Conheci o Pizza Cut, atraves de uns amigos, o ambiente muito aconchegante, o atendimento de primeira classe, o cardápio com várias pizzas saborosas; um lugar muito bom para descontrair, recomendarei esta pizzaria pelo seu sabor e beleza.</p>
+                <h3>Yan Zhao</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+                <img src="./images/clienteF3.jpg">
+            </div>
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+    
+            </ul>
+            <div class="text">
+                <p>Quando fui ao Pizza Cut, esperava uma pizzaria simples e costumeiro como os outros, me supreendi com sua culinaria, seu estilo nobre e aconchegante, a pizzaria apresenta tudo aquilo que sempre busquei um lugar para aproveitar uma boa pizza.</p>
+                <h3>Mia Smith</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+                <img src="./images/clienteH1.jpg">
+            </div>
+            
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+    
+            </ul>
+            <div class="text">
+                <p>Gostei da pizza, da bebida e do ambiente aconchegante, a decoração contagia o cliente e faz os pratos ficarem mais saboroso, voltarei para aproveitar mais do estabelecimento.</p>
+                <h3>Andrew Miller</h3>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="contato" id="contato">
+        <!---------Avaliação-->
+       
+        <script>
+            var stars = document.querySelectorAll('.star-icon');
+            document.addEventListener('click',function(e){
+                var classStar = e.target.classList;
+                if(!classStar.contains('ativo')){
+                    stars.forEach(function(star){
+                        star.classList.remove('ativo');
+                    });
+                    classStar.add('ativo');
+                
+                }
+
+
+            });
+
+
+
+        </script>
+          
+
+          <!--aa-->
+        <div class="title">
+            <h2 class="titletext"><span>S</span>ua vez</h2>
+            <p>Deixe seu comentario sobre nossa Pizzaria</p>
+        </div>
+        <div class="contatoForm">
+            <h3>Deixe seu Comentario</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="Nome">
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <textarea placeholder="Seu comentario aqui"></textarea>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </section>
+    <div class="copyrightText">
+        <p>Copyright - 2022 - “Desenvolvido por Nedson e André na disciplina de <a href="https://www.unitins.br/portalaluno">Desenvolvimento Front-End</a> – 2022” &copy;</p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script> 
+
+    <a href="pag02.html">Ir para página 2</a>
+    <script src = "./scripts/main.js"></script>
+</body>
+</html> 
